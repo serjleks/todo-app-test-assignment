@@ -7331,13 +7331,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"char-regex@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "char-regex@npm:2.0.1"
-  checksum: 8524c03fd7e58381dccf33babe885fe62731ae20755528b19c39945b8203479184f35247210dc9eeeef279cdbdd6511cd3182e0e1db8e4549bf2586470b7c204
-  languageName: node
-  linkType: hard
-
 "character-entities-legacy@npm:^1.0.0":
   version: 1.1.4
   resolution: "character-entities-legacy@npm:1.1.4"
@@ -14009,20 +14002,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-watch-typeahead@npm:1.0.0":
-  version: 1.0.0
-  resolution: "jest-watch-typeahead@npm:1.0.0"
+"jest-watch-typeahead@npm:0.6.4":
+  version: 0.6.4
+  resolution: "jest-watch-typeahead@npm:0.6.4"
   dependencies:
     ansi-escapes: ^4.3.1
     chalk: ^4.0.0
     jest-regex-util: ^27.0.0
     jest-watcher: ^27.0.0
-    slash: ^4.0.0
-    string-length: ^5.0.1
-    strip-ansi: ^7.0.1
+    slash: ^3.0.0
+    string-length: ^4.0.1
+    strip-ansi: ^6.0.0
   peerDependencies:
-    jest: ^27.0.0
-  checksum: 388d5189744e3fad21a8dd9e7fb5bbb9e8c12b4d07b76f8fa9c8df47fa93f25427602b20d9061431abb54290f9a24690adbf5204fd2d8cef7a7688c2f81db18d
+    jest: ^26.0.0 || ^27.0.0
+  checksum: 15a42b0593ed7cbc0273712ed6c4186467fd8d3c6a0d11795b650fb7639e073f1cee6c27ac38fd2ef3a6c27ea43d34daea48f1a1d6202d378b82d8f19daa1f95
   languageName: node
   linkType: hard
 
@@ -19513,13 +19506,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slash@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "slash@npm:4.0.0"
-  checksum: da8e4af73712253acd21b7853b7e0dbba776b786e82b010a5bfc8b5051a1db38ed8aba8e1e8f400dd2c9f373be91eb1c42b66e91abb407ff42b10feece5e1d2d
-  languageName: node
-  linkType: hard
-
 "slice-ansi@npm:^3.0.0":
   version: 3.0.0
   resolution: "slice-ansi@npm:3.0.0"
@@ -20048,16 +20034,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string-length@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "string-length@npm:5.0.1"
-  dependencies:
-    char-regex: ^2.0.0
-    strip-ansi: ^7.0.1
-  checksum: 71f73b8c8a743e01dcd001bcf1b197db78d5e5e53b12bd898cddaf0961be09f947dfd8c429783db3694b55b05cb5a51de6406c5085ff1aaa10c4771440c8396d
-  languageName: node
-  linkType: hard
-
 "string-width@npm:^1.0.1":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
@@ -20185,7 +20161,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:^7.0.0, strip-ansi@npm:^7.0.1":
+"strip-ansi@npm:^7.0.0":
   version: 7.0.1
   resolution: "strip-ansi@npm:7.0.1"
   dependencies:
@@ -20880,7 +20856,7 @@ __metadata:
     image-webpack-loader: 8.1.0
     jest: 26.4.2
     jest-watch-suspend: 1.1.2
-    jest-watch-typeahead: 1.0.0
+    jest-watch-typeahead: 0.6.4
     js-yaml: 4.1.0
     jsdom: 19.0.0
     mini-css-extract-plugin: 2.6.0
