@@ -6,5 +6,5 @@ echo "----------------------------------"
 
 set -e -u -x
 
-# Run unit tests
+# Run cypress tests
 yarn test:e2e;
