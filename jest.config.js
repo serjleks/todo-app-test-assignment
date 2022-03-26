@@ -1,6 +1,4 @@
 const typescriptConfig = require("./tsconfig.json");
-const javascriptTransformer = require("./scripts/jest/transforms/javascript.transform.js");
-const typescriptTransformer = require("./scripts/jest/transforms/typescript.transform.js");
 
 module.exports = {
   displayName: {
@@ -18,16 +16,12 @@ module.exports = {
   globals: {
     "NODE_ENV": "test",
     "ts-jest": {
-      tsconfig: typescriptConfig.compilerOptions,
-      babelConfig: typescriptTransformer.babelConfig
-    },
-    "babel-jest": {
-      babelConfig: javascriptTransformer.babelConfig
+      tsConfig: typescriptConfig.compilerOptions
     }
   },
 
   testMatch: [
-    "**/(__tests__|__test__|__specs__|__spec__)/**/?(*.)+(spec|specs|test|tests).{ts,tsx,js,jsx}"
+    "**/+(__tests__|__test__|__specs__|__spec__)/**/?(*.)+(spec|specs|test|tests).+(ts|tsx|js|jsx)"
   ],
   testPathIgnorePatterns: [
     "/node_modules/",
@@ -50,8 +44,10 @@ module.exports = {
     "\\.(css|sass|scss)$": "identity-obj-proxy"
   },
   transform: {
-    "^.+\\.(ts|tsx)?$": typescriptTransformer.transformer,
-    "^.+\\.(js|jsx)?$": javascriptTransformer.transformer,
+    "^.+\\.(ts|tsx)?$":
+      "<rootDir>/scripts/jest/transforms/typescript.transform.js",
+    "^.+\\.(js|jsx)?$":
+      "<rootDir>/scripts/jest/transforms/javascript.transform.js",
     "^.+\\.(ico|jpg|jpeg|png|gif|svg)$":
       "<rootDir>/scripts/jest/transforms/file.transform.js",
     "^.+\\.(woff|woff2|eot|ttf|otf)$":

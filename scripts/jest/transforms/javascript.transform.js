@@ -1,10 +1,13 @@
+const { createTransformer } = require("babel-jest");
+
 const babelConfig = {
   presets: [
     [
       "@babel/preset-env",
       {
         targets: {
-          node: "current"
+          node: "current",
+          esmodules: false
         },
         modules: "auto",
         loose: true
@@ -15,7 +18,4 @@ const babelConfig = {
   plugins: [["explicit-exports-references"]]
 };
 
-module.exports = {
-  transformer: "babel-jest",
-  babelConfig
-};
+module.exports = createTransformer(babelConfig);
