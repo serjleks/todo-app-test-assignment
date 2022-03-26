@@ -65,11 +65,9 @@ module.exports = (options) => {
 
   // Remove postcss-loader
   if (!optm) {
-    {
-      const rules = loaders.module.rules[0].use;
-      const index = rules.findIndex((k) => k.loader === "postcss-loader");
-      rules.splice(index, 1);
-    }
+    const rules = loaders.module.rules[0].use;
+    const index = rules.findIndex((k) => k.loader === "postcss-loader");
+    rules.splice(index, 1);
   }
 
   // External CSS
