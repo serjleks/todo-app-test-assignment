@@ -1,7 +1,7 @@
 const javascriptBaseRules = require("./javascript.base.rules.js");
 
 module.exports = {
-  files: ["**/(__tests__)/**/*.{js}", "**/?(*.)+(spec|specs|test).{js}"],
+  files: ["**/+(__tests__)/**/*.+(js)", "**/?(*.)+(spec|specs|test).+(js)"],
   parserOptions: {
     ecmaVersion: "2021",
     sourceType: "module"

@@ -4,10 +4,7 @@ module.exports = {
   files: ["*.js"],
   parserOptions: {
     ecmaVersion: "2021",
-    sourceType: "module",
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true
-    }
+    sourceType: "module"
   },
   env: {
     browser: true,

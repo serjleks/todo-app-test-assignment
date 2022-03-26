@@ -1,7 +1,7 @@
 const typescriptBaseRules = require("./typescript.base.rules.js");
 
 module.exports = {
-  files: ["**/(__tests__)/**/*.{ts}", "**/?(*.)+(spec|specs|test).{ts}"],
+  files: ["**/+(__tests__)/**/*.+(ts)", "**/?(*.)+(spec|specs|test).+(ts)"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "tsconfig.json",
