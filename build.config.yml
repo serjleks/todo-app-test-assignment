@@ -1,0 +1,21 @@
+name: "todo-app"
+
+entry: "src/main.tsx"
+
+output:
+  path: "build/"
+  js:
+    path: "js"
+  css:
+    path: "css"
+  images:
+    path: "images"
+
+assets:
+  icons:
+    iconPath: "resources/icons/favicons/favicon.svg"
+    output:
+      path: "icons/"
+
+report:
+  path: "reports/webpack.bundle-report.html"

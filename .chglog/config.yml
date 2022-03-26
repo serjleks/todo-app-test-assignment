@@ -1,0 +1,49 @@
+template: CHANGELOG.tpl.md
+
+style: github
+
+info:
+  title: CHANGELOG
+  repository_url: https://github.com/serjleks/todo-app-test-assignment
+
+options:
+  commits:
+     filters:
+       Type:
+         - feat
+         - fix
+         - chore
+         - refactor
+         - perf
+         - revert
+         - docs
+         - test
+         - style
+         - ci
+         - build
+     sort_by: Scope
+
+  commit_groups:
+     title_maps:
+       feat: Features
+       fix: Bug Fixes
+       chore: Chore related changes
+       refactor: Code Refactoring
+       perf: Performance Improvements
+       revert: Revert
+       docs: Documentation
+       test: Testing
+       style: Styling
+       ci: CI/CD
+       build: Project building, dependencies related changes
+
+  header:
+    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+
+  notes:
+    keywords:
+      - BREAKING CHANGE
