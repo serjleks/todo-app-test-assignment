@@ -142,7 +142,12 @@ module.exports = (env) => {
       optm: options.optm
     }),
 
-    fonts({ exclude }),
+    fonts({
+      mode: MODE,
+      exclude,
+      outputDir: config.get("output.fonts.path"),
+      optm: options.optm
+    }),
 
     // HTML
     {

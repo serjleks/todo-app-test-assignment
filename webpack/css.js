@@ -100,7 +100,6 @@ module.exports = (options) => {
         }
       ]
     },
-
     plugins: [
       new MiniCssExtractPlugin({
         filename: isProd

@@ -13,15 +13,12 @@ module.exports = (options) => {
         {
           test: /\.(ico|jpg|jpeg|png|gif)(\?.*)?$/,
           exclude,
-
           type: "asset/resource",
-
           generator: {
             filename: isProd
-              ? `${outputDir}/[hash:base64:8][ext]`
+              ? `${outputDir}/[contenthash:8][ext]`
               : `${outputDir}/[name]_[hash:8][ext]`
           },
-
           use: [
             {
               loader: "image-webpack-loader",
@@ -48,21 +45,19 @@ module.exports = (options) => {
         {
           test: /\.(svg)(\?.*)?$/,
           exclude,
-
           type: optm ? "asset/inline" : "asset/resource",
-
-          generator: {
-            filename: isProd
-              ? `${outputDir}/[hash:base64:8][ext]`
-              : `${outputDir}/[name]_[hash:8][ext]`
-          },
-
+          generator: !optm
+            ? {
+              filename: isProd
+                ? `${outputDir}/[contenthash:8][ext]`
+                : `${outputDir}/[name]_[hash:8][ext]`
+            }
+            : {},
           parser: {
             dataUrlCondition: {
               maxSize: 2 * 1024 // 2kb
             }
           },
-
           use: [
             {
               loader: "image-webpack-loader",

@@ -1,3 +1,5 @@
+const path = require("path");
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // PostCSS plugins
@@ -24,7 +26,7 @@ module.exports = (options) => {
       rules: [
         {
           test: /\.(sass|scss)$/,
-          include: /\.module\.(sass|scss)$/,
+          include: [/\.module\.(sass|scss)$/],
           exclude: [...exclude],
           use: [
             extCss
@@ -66,8 +68,6 @@ module.exports = (options) => {
               options: {
                 sourceMap: srcmap,
                 sassOptions: {
-                  includePaths: ["src"]
-                }
               }
             }
           ]
@@ -110,8 +110,6 @@ module.exports = (options) => {
               options: {
                 sourceMap: srcmap,
                 sassOptions: {
-                  includePaths: ["src"]
-                }
               }
             }
           ]
