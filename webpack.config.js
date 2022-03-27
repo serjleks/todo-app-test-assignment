@@ -33,13 +33,14 @@ convict.addParser({
 
 module.exports = (env) => {
   const isProd = MODE === "production";
+  const isHot = utils.getBoolean(env.hot, false);
 
   const config = convict({});
 
   const options = {
     optm: utils.getBoolean(env.optm, isProd),
-    hot: utils.getBoolean(env.hot, false),
-    extcss: utils.getBoolean(env.extcss, true),
+    hot: isHot,
+    extcss: utils.getBoolean(env.extcss, !isHot),
     split: utils.getBoolean(env.split, true),
     srcmap: utils.getBoolean(env.srcmap, !isProd),
     forktsc: utils.getBoolean(env.forktsc, !isProd),

@@ -15,6 +15,15 @@ function getBoolean(value, defaultValue) {
   }
 }
 
+const findLoader = (loadersArray, loaderName) =>
+  loadersArray.findIndex((rule) => rule.loader === loaderName);
+
+const removeLoader = (loadersArray, loaderName) => {
+  loadersArray.splice(findLoader(loadersArray, loaderName), 1);
+};
+
 module.exports = {
-  getBoolean
+  getBoolean,
+  findLoader,
+  removeLoader
 };
