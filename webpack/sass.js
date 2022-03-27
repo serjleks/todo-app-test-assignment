@@ -68,6 +68,12 @@ module.exports = (options) => {
               options: {
                 sourceMap: srcmap,
                 sassOptions: {
+                  includePaths: [path.join(__dirname, "src")]
+                },
+                additionalData: `
+                  @import "src/styles/base/_variables.scss";
+                  @import "src/styles/themes/default/_variables.scss";
+                `
               }
             }
           ]
@@ -110,6 +116,12 @@ module.exports = (options) => {
               options: {
                 sourceMap: srcmap,
                 sassOptions: {
+                  includePaths: [path.join(__dirname, "src")]
+                },
+                additionalData: `
+                  @import "src/styles/base/_variables.scss";
+                  @import "src/styles/themes/default/_variables.scss";
+                `
               }
             }
           ]

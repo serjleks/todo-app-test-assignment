@@ -1,6 +1,6 @@
 name: "todo-app"
 
-entry: "src/main.tsx"
+entry: "src/main.ts"
 
 output:
   path: "build/"
@@ -10,6 +10,8 @@ output:
     path: "css"
   images:
     path: "images"
+  fonts:
+    path: "fonts"
 
 assets:
   icons:
